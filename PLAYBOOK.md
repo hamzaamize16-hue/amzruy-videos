@@ -16,7 +16,7 @@ Ce dépôt contient tout le nécessaire :
 ## 0. Démarrage (5 min)
 1. Lire ce PLAYBOOK et `episodes.json` (sujets, hooks et styles déjà utilisés).
 2. Prérequis à vérifier :
-   - Metricool : `getBrandSettings` → trouver la marque dont `networksData.youtubeData` est la chaîne **amzruy numadal** (vérifier le nom avec WebFetch sur `https://www.youtube.com/channel/<id>`). ⚠️ La marque 7721494 = @tillasquotes : **ne jamais publier dessus**.
+   - Metricool : `getBrandSettings` → la marque **7721494** doit avoir `networksData.youtubeData` = **UCj7QL0MrpADd1XRrxt6aIIQ** (chaîne « Amzruy N'umadal », @Amzruy_Numadal). Si l'identifiant de chaîne est différent (par exemple l'ancienne chaîne @tillasquotes, UC20jdUQGBQwRJsB3LdTnSMQ) : **ne rien publier** et prévenir l'utilisateur.
    - Ordinateur de l'utilisateur joignable (navigateur intégré + dossier Téléchargements) pour la voix ElevenLabs.
 3. Si un prérequis manque : produire quand même la vidéo jusqu'où c'est possible, **ne rien publier**, prévenir l'utilisateur (PushNotification / SendUserMessage) avec ce qui manque.
 
@@ -66,7 +66,7 @@ Sujets à éviter : polémiques politiques actuelles, religion présentée de fa
 ## 6. Publication
 1. `episodes/EPxx/metadata.json` : titre (≤ 100 car., darija + emoji + `#shorts`), description (résumé, question pour les commentaires, CTA, sources, 6 à 8 hashtags), tags (arabe + français + anglais), `category: EDUCATION`.
 2. Commit + push de `episodes/EPxx/` sur `main` du dépôt **hamzaamize16-hue/amzruy-videos** (public). URL publique : `https://raw.githubusercontent.com/hamzaamize16-hue/amzruy-videos/main/episodes/EPxx/final.mp4`.
-3. Metricool `createScheduledPost` : `blogId` de la marque amzruy numadal, `date` = aujourd'hui 19:00 Europe/Paris, `info` :
+3. Metricool `createScheduledPost` : `blogId` 7721494 (après vérification de la chaîne UCj7QL0MrpADd1XRrxt6aIIQ), `date` = aujourd'hui 19:00 Europe/Paris, `info` :
    `{"autoPublish":true,"draft":false,"text":"<description>","media":["<url raw>"],"providers":[{"network":"youtube"}],"publicationDate":{"dateTime":"YYYY-MM-DDT19:00:00","timezone":"Europe/Paris"},"youtubeData":{"title":"<titre>","type":"short","privacy":"public","tags":[...],"category":"EDUCATION","madeForKids":false,"isAiGeneratedContent":false},"descendants":[],"firstCommentText":"<question pour lancer les commentaires>","hasNotReadNotes":false,"mediaAltText":[],"shortener":false,"smartLinkData":{"ids":[]}}`
 4. Mettre à jour `episodes.json` (sujet, angle, type de hook, style visuel, lien Metricool) et pousser.
 5. Ménage : supprimer du dépôt les `final.mp4` des épisodes publiés depuis plus de 3 jours (le dépôt doit rester léger).
