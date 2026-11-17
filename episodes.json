@@ -1,0 +1,16 @@
+{
+  "channel": "Amzruy n Umadal",
+  "publish_time": "19:00 Europe/Paris",
+  "episodes": [
+    {
+      "id": "EP01",
+      "date": "2026-11-17",
+      "topic": "Le Maroc, premier pays à reconnaître les États-Unis (1777)",
+      "angle": "fierté marocaine + lien avec une superpuissance",
+      "hook": "question: واش عرفتي شكون أول دولة فالعالم اعترفات بأمريكا؟",
+      "visual_style": "carte animée + traité + compteur + illustration Tanger",
+      "status": "ready",
+      "metricool_post": null
+    }
+  ]
+}
